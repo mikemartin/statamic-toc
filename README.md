@@ -1,3 +1,6 @@
+# TOC ![Statamic 2.0](https://img.shields.io/badge/statamic-2.0-blue.svg?style=flat-square)
+
+
 ## Statamic add-on modifiers : toc
 
 ### Description
