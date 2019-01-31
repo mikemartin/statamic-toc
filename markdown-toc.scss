@@ -1,0 +1,33 @@
+.markdown-toc {
+  position: relative;
+  display: inline-block;
+  @include border-radius($card-border-radius);
+  font-size: 15px;
+  &-title {
+    font-weight: 500;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+  }
+
+
+  &-block {
+    padding: $card-spacer-x/2 0;
+
+    ol {
+      list-style: none;
+      padding-left: 0;
+      li {
+        margin-bottom: $spacer-y/2;
+      }
+    }
+
+    ol ol {
+      margin-top: $spacer-y/2;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    display: block;
+    width: 100%;
+  }
+}

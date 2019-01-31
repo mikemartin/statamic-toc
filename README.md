@@ -25,6 +25,28 @@ Typical use inside a template might look like this:
 </article>
 ```	
 
+### Output
+`markdown-toc.scss` also included for reference
+
+```
+<div class="markdown-toc">
+	<div class="markdown-toc-title">Contents</div>
+	<div class="markdown-toc-block">
+		<ol>
+			<li>
+				<a href="#heading-name" data-scroll>Heading name</a>
+			</li>
+			<li>
+				<a href="#heading-name" data-scroll>Parent Heading</a> 
+				<ol>
+					<li><a href="#heading-name" data-scroll>Child Heading</a></li>
+				</ol>
+			</li>
+		</ol>
+	</div>
+</div>
+```
+
 To conditionally display the table of contents in a template, create a YAML field in the YAML front matter named something like 'toc', and check for it in the template code. If turned on, display the content with the toc filter, otherwise, don't.
 
 So the YAML front matter might look like this for a file:
