@@ -32,11 +32,11 @@ Typical use inside a template might look like this:
 <div class="markdown-toc">
   <div class="markdown-toc-title">Contents</div>
   <div class="markdown-toc-block">
-	  <ol>
-		  <li>
-			  <a href="#heading-name" data-scroll>Heading name</a>
-			</li>
-			<li>
+    <ol>
+      <li>
+        <a href="#heading-name" data-scroll>Heading name</a>
+      </li>
+      <li>
         <a href="#parent-heading" data-scroll>Parent Heading</a> 
         <ol>
           <li><a href="#child-heading" data-scroll>Child Heading</a></li>
