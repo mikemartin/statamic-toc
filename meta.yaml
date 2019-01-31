@@ -1,0 +1,8 @@
+name: toc
+version: "1.0"
+description: >
+  Creates a clickable table of contents at the beginning of the content area inside a Statamic
+  template using headings tags
+url: http://github.com/mikemartin/statamic-toc
+developer: Mike Martin
+developer_url: http://github.com/mikemartin
