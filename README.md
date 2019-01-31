@@ -20,8 +20,8 @@ Typical use inside a template might look like this:
 
 ```
 <article>
-	<h1>{{title}}</h1>
-	{{content|toc:show}}
+  <h1>{{title}}</h1>
+  {{content|toc:show}}
 </article>
 ```	
 
@@ -72,7 +72,7 @@ Then the page template would look like:
 
 ```
 <article>
-	<h1>{{title}}</h1>
+  <h1>{{title}}</h1>
   {{ if show_toc }}
     {{content|toc:show}}
   {{ else }}
@@ -91,13 +91,13 @@ An example CSS setup might look like this:
 
 ```
 .markdown-toc-block {
-	width: 33%;
-	background-color: #efefef;
-	float:right;
-	padding:1em ;
+  width: 33%;
+  background-color: #efefef;
+  float:right;
+  padding:1em ;
 }
 .markdown-toc{
-	font-size: 0.9em;
+  font-size: 0.9em;
 }
 ```
 
