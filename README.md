@@ -30,20 +30,20 @@ Typical use inside a template might look like this:
 
 ```
 <div class="markdown-toc">
-	<div class="markdown-toc-title">Contents</div>
-	<div class="markdown-toc-block">
-		<ol>
-			<li>
-				<a href="#heading-name" data-scroll>Heading name</a>
+  <div class="markdown-toc-title">Contents</div>
+  <div class="markdown-toc-block">
+	  <ol>
+		  <li>
+			  <a href="#heading-name" data-scroll>Heading name</a>
 			</li>
 			<li>
-				<a href="#heading-name" data-scroll>Parent Heading</a> 
-				<ol>
-					<li><a href="#heading-name" data-scroll>Child Heading</a></li>
-				</ol>
-			</li>
-		</ol>
-	</div>
+        <a href="#parent-heading" data-scroll>Parent Heading</a> 
+        <ol>
+          <li><a href="#child-heading" data-scroll>Child Heading</a></li>
+        </ol>
+      </li>
+    </ol>
+  </div>
 </div>
 ```
 
