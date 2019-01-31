@@ -21,7 +21,7 @@ Typical use inside a template might look like this:
 ```
 <article>
 	<h1>{{title}}</h1>
-	{{content|toc}}
+	{{content|toc:show}}
 </article>
 ```	
 
@@ -47,6 +47,8 @@ Typical use inside a template might look like this:
 </div>
 ```
 
+## Conditionally Show TOC
+
 To conditionally display the table of contents in a template, create a YAML field in the YAML front matter named something like 'toc', and check for it in the template code. If turned on, display the content with the toc filter, otherwise, don't.
 
 So the YAML front matter might look like this for a file:
@@ -71,13 +73,11 @@ Then the page template would look like:
 ```
 <article>
 	<h1>{{title}}</h1>
-	if{{ toc == 'true'}}
-	{
-		{{content|toc}}
-	{
-	else
-	{{content}}
-}
+  {{ if show_toc }}
+    {{content|toc:show}}
+  {{ else }}
+    {{content|toc}}
+  {{ /if }}
 </article>
 ```
 
@@ -85,18 +85,18 @@ You get the idea. This could also be used for some on-page navigation for longer
 
 ### Basic example with some styling
 
-The plugin returns the table of contents block with a class of *toc-block* and the original content with a class of *content-block*. The classes enable the divs to be targeted using the appropriate class selector, and allow setting the width and float properties for each block.  In a similar manner, the ```<ol>``` elements can be targeted using the class selector *toc*.
+The plugin returns the table of contents block with a class of *toc-block* and the original content with a class of *content-block*. The classes enable the divs to be targeted using the appropriate class selector, and allow setting the width and float properties for each block.  In a similar manner, the ```<ol>``` elements can be targeted using the class selector *markdown-toc*.
 
 An example CSS setup might look like this:
 
 ```
-.toc-block {
+.markdown-toc-block {
 	width: 33%;
 	background-color: #efefef;
 	float:right;
 	padding:1em ;
 }
-.toc{
+.markdown-toc{
 	font-size: 0.9em;
 }
 ```
@@ -111,7 +111,7 @@ This will create a table of contents at the top of the page that looks like this
 
 Note that Statamic modifiers should have **NO** spaces before or after the pipe ```'|'```!
 
-Also note that if when chaining modifiers like *widont*, the *toc* modifier should come last in the chain. In other words, the tag should look like ```{{content|widont|toc}}```. 
+Also note that if when chaining modifiers like *widont*, the *toc* modifier should come last in the chain. In other words, the tag should look like ```{{content|widont|toc:show}}```. 
 
 
 
